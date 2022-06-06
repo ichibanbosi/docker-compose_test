@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
-COPY requirements.txt /tmp/
-COPY app.py /opt/
+ADD requirements.txt /tmp/
+ADD app.py /opt/
 RUN apt-get update && \
 DEBIAN_FRONTEND=noninteractive apt-get install -y -q python-all python-pip
 WORKDIR /tmp/
